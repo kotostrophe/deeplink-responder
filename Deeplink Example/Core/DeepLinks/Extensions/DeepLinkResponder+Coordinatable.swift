@@ -10,22 +10,6 @@ import UIKit
 
 extension Coordinatable where Self: DeepLinkResponder {
     
-    func startApplicationDeeplink(_ url: URL) {
-        UIApplication.shared.open(url, options: [:])
-    }
-    
-    func startApplicationDeeplink(
-        _ path: String,
-        on queue: DispatchQueue = .global(qos: .background)
-    ) {
-        guard let mainScene = UIApplication.shared
-            .connectedScenes
-            .compactMap({ $0.delegate as? MainSceneDelegate })
-            .first
-        else { return }
-        mainScene.applicationCoordinator?.start(deeplink: path, on: queue)
-    }
-    
     func start(
         deeplink path: String,
         on queue: DispatchQueue = .global(qos: .background)

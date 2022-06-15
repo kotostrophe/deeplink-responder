@@ -26,3 +26,8 @@ Opens actor with identifier `3`. You can pass any identifier in range of `1` to 
 ```http
 deep://movies.com/actors/3
 ```
+
+Opens settings page with identifier. Use `wifi` and `bluetooth` identifiers to open specific settings page
+```http
+deep://movies.com/settings/<identifier>
+```

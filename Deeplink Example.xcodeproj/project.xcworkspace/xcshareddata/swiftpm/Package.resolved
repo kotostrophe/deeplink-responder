@@ -1,6 +1,24 @@
 {
   "pins" : [
     {
+      "identity" : "coordinatorkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kotostrophe/CoordinatorKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "940e98d1ee341a0dfb6b5417edd497e50811eb67"
+      }
+    },
+    {
+      "identity" : "deepcoordinatorkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kotostrophe/DeepCoordinatorKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "035d08ed1eea5c0db81ec7de012bfdcdb7ef334d"
+      }
+    },
+    {
       "identity" : "swiftyjson",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftyJSON/SwiftyJSON",

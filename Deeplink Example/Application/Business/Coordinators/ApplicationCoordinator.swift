@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoordinatorKit
+import DeepCoordinatorKit
 
 protocol ApplicationCoordinatorProtocol: Coordinatable, DeepLinkResponder {
     
@@ -35,14 +37,20 @@ final class ApplicationCoordinator: ApplicationCoordinatorProtocol {
     
     // MARK: - Methods
     
-    func start(animated: Bool, completion: (() -> Void)?) {
+    func start(animated: Bool) {
         let mainCoordinator = MainCoordinator()
         mainCoordinator.parent = self
-        childLocator.push(coordiantor: mainCoordinator, by: "main")
-        mainCoordinator.start(animated: animated, completion: nil)
+        childLocator.push(mainCoordinator, by: "main")
+        mainCoordinator.start(animated: animated)
         
         window.rootViewController = mainCoordinator.rootViewController
         window.makeKeyAndVisible()
-        completion?()
+    }
+    
+    func finish(animated: Bool) {
+        childLocator.popAll()
+        
+        window.rootViewController = nil
+        window.makeKeyAndVisible()
     }
 }

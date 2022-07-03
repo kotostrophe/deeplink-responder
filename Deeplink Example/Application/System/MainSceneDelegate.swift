@@ -23,7 +23,7 @@ final class MainSceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let applicationCoordinator = ApplicationCoordinator(window: window)
         self.applicationCoordinator = applicationCoordinator
-        applicationCoordinator.start(animated: true, completion: nil)
+        applicationCoordinator.start(animated: true)
         
         let userActivityPath = connectionOptions.userActivities.first?.webpageURL?.path
         let urlContextPath = connectionOptions.urlContexts.first?.url.path

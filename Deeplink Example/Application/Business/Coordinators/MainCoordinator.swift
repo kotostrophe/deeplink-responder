@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoordinatorKit
+import DeepCoordinatorKit
 
 protocol MainCoordinatorProtocol: Coordinatable, DeepLinkResponder {
     
@@ -37,7 +39,7 @@ final class MainCoordinator: MainCoordinatorProtocol {
     
     // MARK: - Methods
     
-    func start(animated: Bool, completion: (() -> Void)?) {
+    func start(animated: Bool) {
         let moviesViewController: UIViewController = {
             let moviesNavigationController = UINavigationController()
             moviesNavigationController.navigationBar.prefersLargeTitles = true
@@ -48,8 +50,8 @@ final class MainCoordinator: MainCoordinatorProtocol {
             )
             let moviesCoordinator = MoviesCoordinator(navigationController: moviesNavigationController)
             moviesCoordinator.parent = self
-            childLocator.push(coordiantor: moviesCoordinator, by: "movies.list")
-            moviesCoordinator.start(animated: animated, completion: nil)
+            childLocator.push(moviesCoordinator, by: "movies.list")
+            moviesCoordinator.start(animated: animated)
             return moviesNavigationController
         }()
         
@@ -63,8 +65,8 @@ final class MainCoordinator: MainCoordinatorProtocol {
             )
             let settingsCoordinator = SettingsCoordinator(navigationController: settingsNavigationController)
             settingsCoordinator.parent = self
-            childLocator.push(coordiantor: settingsCoordinator, by: "settings.list")
-            settingsCoordinator.start(animated: animated, completion: nil)
+            childLocator.push(settingsCoordinator, by: "settings.list")
+            settingsCoordinator.start(animated: animated)
             return settingsNavigationController
         }()
         
@@ -72,7 +74,9 @@ final class MainCoordinator: MainCoordinatorProtocol {
             moviesViewController,
             settingsViewController
         ]
-        completion?()
     }
     
+    func finish(animated: Bool) {
+        childLocator.popAll()
+    }
 }

@@ -5,14 +5,15 @@
 //  Created by Тарас Коцур on 11.06.2022.
 //
 
-import Foundation
 import UIKit
+import CoordinatorKit
+import DeepCoordinatorKit
 
 protocol MoviesCoordinatorProtocol: Coordinatable, DeepLinkResponder {
-    func startMoviesList(animated: Bool, completion: (() -> Void)?)
-    func startMovie(by id: Int, animated: Bool, completion: (() -> Void)?)
-    func startActors(byMovie id: Int, animated: Bool, completion: (() -> Void)?)
-    func startActor(by id: Int, animated: Bool, completion: (() -> Void)?)
+    func startMoviesList(animated: Bool)
+    func startMovie(by id: Int, animated: Bool)
+    func startActors(byMovie id: Int, animated: Bool)
+    func startActor(by id: Int, animated: Bool)
 }
 
 final class MoviesCoordinator: MoviesCoordinatorProtocol {
@@ -52,36 +53,36 @@ final class MoviesCoordinator: MoviesCoordinatorProtocol {
     
     // MARK: - Methods
     
-    func start(animated: Bool, completion: (() -> Void)?) {
-        startMoviesList(animated: animated, completion: completion)
+    func start(animated: Bool) {
+        startMoviesList(animated: animated)
     }
     
-    func startMoviesList(animated: Bool, completion: (() -> Void)?) {
+    func startMoviesList(animated: Bool) {
         let view = moviesScreenBuilder.buildMoviesList(output: self)
         navigationController.pushViewController(view, animated: animated)
-        completion?()
     }
     
-    func startMovie(by id: Int, animated: Bool, completion: (() -> Void)?) {
+    func startMovie(by id: Int, animated: Bool) {
         let view = moviesScreenBuilder.buildMovie(by: id, output: self)
         navigationController.pushViewController(view, animated: animated)
-        completion?()
     }
     
-    func startActors(byMovie id: Int, animated: Bool, completion: (() -> Void)?) {
+    func startActors(byMovie id: Int, animated: Bool) {
         let view = moviesScreenBuilder.buildActorsList(byMovie: id, output: self)
         navigationController.pushViewController(view, animated: animated)
-        completion?()
     }
     
-    func startActor(by id: Int, animated: Bool, completion: (() -> Void)?) {
+    func startActor(by id: Int, animated: Bool) {
         let view = moviesScreenBuilder.buildActor(by: id, output: self)
         navigationController.pushViewController(view, animated: animated)
-        completion?()
     }
     
     func popBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func finish(animated: Bool) {
+        childLocator.popAll()
     }
 }
 
@@ -90,7 +91,7 @@ final class MoviesCoordinator: MoviesCoordinatorProtocol {
 extension MoviesCoordinator: MoviesListOutput {
     
     func moviesList(_ presenter: MoviesListPresenterProtocol, didSelectMovieWith id: Int) {
-        startMovie(by: id, animated: true, completion: nil)
+        startMovie(by: id, animated: true)
     }
 }
 
@@ -98,7 +99,7 @@ extension MoviesCoordinator: MoviesListOutput {
 
 extension MoviesCoordinator: MovieOutput {
     func movie(_ presenter: MoviePresenterProtocol, didSelectActorsListBy id: Int) {
-        startActors(byMovie: id, animated: true, completion: nil)
+        startActors(byMovie: id, animated: true)
     }
     
     func movie(_ presenter: MoviePresenterProtocol, didNotFindMovieBy id: Int) {
@@ -110,7 +111,7 @@ extension MoviesCoordinator: MovieOutput {
 
 extension MoviesCoordinator: ActorsListOutput {
     func actorsList(_ presenter: ActorsListPresenterProtocol, didSelectActorWith id: Int) {
-        startActor(by: id, animated: true, completion: nil)
+        startActor(by: id, animated: true)
     }
 }
 
@@ -132,29 +133,29 @@ extension MoviesCoordinator {
     
     func makeMoviesListHandler() -> DeepLinkRoute {
         .init(path: "movies") { [weak self] _ in
-            self?.startMoviesList(animated: true, completion: nil)
+            self?.startMoviesList(animated: true)
         }
     }
     
     func makeMovieHandler() -> DeepLinkRoute {
         .init(path: "movies" / PathComponents.movieId) { [weak self] json in
             let movieId = json[PathComponents.movieId].intValue
-            self?.startMovie(by: movieId, animated: true, completion: nil)
+            self?.startMovie(by: movieId, animated: true)
         }
     }
     
     func makeActorsListOfMovieHandler() -> DeepLinkRoute {
         .init(path: "movies" / PathComponents.movieId / "actors") { [weak self] json in
             let movieId = json[PathComponents.movieId].intValue
-            self?.startMovie(by: movieId, animated: false, completion: nil)
-            self?.startActors(byMovie: movieId, animated: true, completion: nil)
+            self?.startMovie(by: movieId, animated: false)
+            self?.startActors(byMovie: movieId, animated: true)
         }
     }
     
     func makeActorHandler() -> DeepLinkRoute {
         .init(path: "actors" / PathComponents.actorId) { [weak self] json in
             let actorId = json[PathComponents.actorId].intValue
-            self?.startActor(by: actorId, animated: true, completion: nil)
+            self?.startActor(by: actorId, animated: true)
         }
     }
 }

@@ -24,17 +24,7 @@
 		ED238D182854CA7A000CC3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED238D172854CA7A000CC3FE /* Assets.xcassets */; };
 		ED238D1B2854CA7A000CC3FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED238D192854CA7A000CC3FE /* LaunchScreen.storyboard */; };
 		ED238D292854CAEE000CC3FE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D282854CAEE000CC3FE /* ApplicationCoordinator.swift */; };
-		ED238D2E2854CC2D000CC3FE /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D2D2854CC2D000CC3FE /* Coordinatable.swift */; };
-		ED238D362854CF38000CC3FE /* DeepLinkResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D302854CF38000CC3FE /* DeepLinkResponder.swift */; };
-		ED238D372854CF38000CC3FE /* DeepLinkLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D312854CF38000CC3FE /* DeepLinkLocator.swift */; };
-		ED238D382854CF38000CC3FE /* DeepLinkComponent+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D332854CF38000CC3FE /* DeepLinkComponent+String.swift */; };
-		ED238D392854CF38000CC3FE /* DeepLinkComponent+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D342854CF38000CC3FE /* DeepLinkComponent+JSON.swift */; };
-		ED238D3A2854CF38000CC3FE /* DeepLinkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D352854CF38000CC3FE /* DeepLinkRoute.swift */; };
-		ED6A4E4A2854D2EF002969EC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = ED6A4E492854D2EF002969EC /* SwiftyJSON */; };
-		ED6A4E4E2854D34B002969EC /* Collection+isNoEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E4D2854D34B002969EC /* Collection+isNoEmpty.swift */; };
-		ED6A4E502854D3AB002969EC /* CoordinatorLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E4F2854D3AB002969EC /* CoordinatorLocator.swift */; };
 		ED6A4E522854F04A002969EC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E512854F04A002969EC /* MainCoordinator.swift */; };
-		ED6A4E542854F3EC002969EC /* DeepLinkResponder+Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E532854F3EC002969EC /* DeepLinkResponder+Coordinatable.swift */; };
 		ED6A4E5B285500EC002969EC /* MoviesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E5A285500EC002969EC /* MoviesListPresenter.swift */; };
 		ED6A4E5E2855011F002969EC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E5D2855011F002969EC /* Movie.swift */; };
 		ED6A4E602855029F002969EC /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E5F2855029F002969EC /* MoviesListViewController.swift */; };
@@ -49,6 +39,7 @@
 		EDB13B1C285537770032CBDC /* ActorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB13B1B285537770032CBDC /* ActorViewController.swift */; };
 		EDB13B1E285537890032CBDC /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB13B1D285537890032CBDC /* MoviesListViewController.xib */; };
 		EDB13B20285538130032CBDC /* ActorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB13B1F285538130032CBDC /* ActorPresenter.swift */; };
+		EDF9C2D02872417E0090E6EE /* DeepCoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = EDF9C2CF2872417E0090E6EE /* DeepCoordinatorKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,16 +61,7 @@
 		ED238D172854CA7A000CC3FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED238D1A2854CA7A000CC3FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED238D282854CAEE000CC3FE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		ED238D2D2854CC2D000CC3FE /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
-		ED238D302854CF38000CC3FE /* DeepLinkResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkResponder.swift; sourceTree = "<group>"; };
-		ED238D312854CF38000CC3FE /* DeepLinkLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkLocator.swift; sourceTree = "<group>"; };
-		ED238D332854CF38000CC3FE /* DeepLinkComponent+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeepLinkComponent+String.swift"; sourceTree = "<group>"; };
-		ED238D342854CF38000CC3FE /* DeepLinkComponent+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeepLinkComponent+JSON.swift"; sourceTree = "<group>"; };
-		ED238D352854CF38000CC3FE /* DeepLinkRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinkRoute.swift; sourceTree = "<group>"; };
-		ED6A4E4D2854D34B002969EC /* Collection+isNoEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+isNoEmpty.swift"; sourceTree = "<group>"; };
-		ED6A4E4F2854D3AB002969EC /* CoordinatorLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorLocator.swift; sourceTree = "<group>"; };
 		ED6A4E512854F04A002969EC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		ED6A4E532854F3EC002969EC /* DeepLinkResponder+Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepLinkResponder+Coordinatable.swift"; sourceTree = "<group>"; };
 		ED6A4E5A285500EC002969EC /* MoviesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListPresenter.swift; sourceTree = "<group>"; };
 		ED6A4E5D2855011F002969EC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ED6A4E5F2855029F002969EC /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED6A4E4A2854D2EF002969EC /* SwiftyJSON in Frameworks */,
+				EDF9C2D02872417E0090E6EE /* DeepCoordinatorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				ED238D222854CA9A000CC3FE /* Application */,
-				ED238D2C2854CC22000CC3FE /* Protocol */,
-				ED238D2A2854CC12000CC3FE /* Core */,
-				ED6A4E4B2854D334002969EC /* Extensions */,
 				ED238D232854CAA3000CC3FE /* Resources */,
 			);
 			path = "Deeplink Example";
@@ -273,60 +252,6 @@
 				ED0EC5C92855550A00C01397 /* SettingsCoordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		ED238D2A2854CC12000CC3FE /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				ED238D2F2854CF38000CC3FE /* DeepLinks */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		ED238D2C2854CC22000CC3FE /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				ED238D2D2854CC2D000CC3FE /* Coordinatable.swift */,
-				ED6A4E4F2854D3AB002969EC /* CoordinatorLocator.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		ED238D2F2854CF38000CC3FE /* DeepLinks */ = {
-			isa = PBXGroup;
-			children = (
-				ED238D302854CF38000CC3FE /* DeepLinkResponder.swift */,
-				ED238D312854CF38000CC3FE /* DeepLinkLocator.swift */,
-				ED238D352854CF38000CC3FE /* DeepLinkRoute.swift */,
-				ED238D322854CF38000CC3FE /* Extensions */,
-			);
-			path = DeepLinks;
-			sourceTree = "<group>";
-		};
-		ED238D322854CF38000CC3FE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ED6A4E532854F3EC002969EC /* DeepLinkResponder+Coordinatable.swift */,
-				ED238D332854CF38000CC3FE /* DeepLinkComponent+String.swift */,
-				ED238D342854CF38000CC3FE /* DeepLinkComponent+JSON.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		ED6A4E4B2854D334002969EC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ED6A4E4C2854D33C002969EC /* Foundation */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		ED6A4E4C2854D33C002969EC /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				ED6A4E4D2854D34B002969EC /* Collection+isNoEmpty.swift */,
-			);
-			path = Foundation;
 			sourceTree = "<group>";
 		};
 		ED6A4E55285500A9002969EC /* MoviesList */ = {
@@ -471,7 +396,7 @@
 			);
 			name = "Deeplink Example";
 			packageProductDependencies = (
-				ED6A4E492854D2EF002969EC /* SwiftyJSON */,
+				EDF9C2CF2872417E0090E6EE /* DeepCoordinatorKit */,
 			);
 			productName = "Deeplink Example";
 			productReference = ED238D0B2854CA71000CC3FE /* Deeplink Example.app */;
@@ -502,7 +427,7 @@
 			);
 			mainGroup = ED238D022854CA71000CC3FE;
 			packageReferences = (
-				ED6A4E482854D2EF002969EC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				EDF9C2CE2872417E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */,
 			);
 			productRefGroup = ED238D0C2854CA71000CC3FE /* Products */;
 			projectDirPath = "";
@@ -538,33 +463,24 @@
 			files = (
 				ED238D0F2854CA71000CC3FE /* ApplicationDelegate.swift in Sources */,
 				ED6A4E522854F04A002969EC /* MainCoordinator.swift in Sources */,
-				ED238D2E2854CC2D000CC3FE /* Coordinatable.swift in Sources */,
-				ED238D372854CF38000CC3FE /* DeepLinkLocator.swift in Sources */,
 				ED0EC5CE2855568300C01397 /* SettingsItemViewController.swift in Sources */,
 				ED0E65712855406F00433BFA /* ActorsListPresenter.swift in Sources */,
 				EDB13B1C285537770032CBDC /* ActorViewController.swift in Sources */,
-				ED238D392854CF38000CC3FE /* DeepLinkComponent+JSON.swift in Sources */,
 				ED6A4E7D28551518002969EC /* MoviesFetchService.swift in Sources */,
 				ED6A4E602855029F002969EC /* MoviesListViewController.swift in Sources */,
 				ED0EC5CA2855550A00C01397 /* SettingsCoordinator.swift in Sources */,
 				ED6A4E812855173A002969EC /* Actor.swift in Sources */,
 				ED0E6574285540DA00433BFA /* ActorsListViewController.swift in Sources */,
-				ED6A4E502854D3AB002969EC /* CoordinatorLocator.swift in Sources */,
 				ED0EC5C82855522C00C01397 /* SettingsItem.swift in Sources */,
 				ED6A4E792855120B002969EC /* MoviePresenter.swift in Sources */,
 				ED0EC5C0285550AD00C01397 /* SettingsPresenter.swift in Sources */,
-				ED238D362854CF38000CC3FE /* DeepLinkResponder.swift in Sources */,
-				ED6A4E4E2854D34B002969EC /* Collection+isNoEmpty.swift in Sources */,
 				ED6A4E8828552081002969EC /* MoviesCoordinator.swift in Sources */,
 				ED0E6578285543C400433BFA /* ActorsFetchService.swift in Sources */,
 				ED6A4E8A285523A7002969EC /* MovieViewController.swift in Sources */,
 				ED6A4E5E2855011F002969EC /* Movie.swift in Sources */,
 				EDB13B20285538130032CBDC /* ActorPresenter.swift in Sources */,
 				ED238D112854CA71000CC3FE /* MainSceneDelegate.swift in Sources */,
-				ED6A4E542854F3EC002969EC /* DeepLinkResponder+Coordinatable.swift in Sources */,
 				ED0EC5C2285550E800C01397 /* SettingsViewController.swift in Sources */,
-				ED238D3A2854CF38000CC3FE /* DeepLinkRoute.swift in Sources */,
-				ED238D382854CF38000CC3FE /* DeepLinkComponent+String.swift in Sources */,
 				ED6A4E5B285500EC002969EC /* MoviesListPresenter.swift in Sources */,
 				ED238D292854CAEE000CC3FE /* ApplicationCoordinator.swift in Sources */,
 				ED0EC5BA2855504F00C01397 /* SettingsScreenBuilder.swift in Sources */,
@@ -778,21 +694,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED6A4E482854D2EF002969EC /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		EDF9C2CE2872417E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			repositoryURL = "https://github.com/kotostrophe/DeepCoordinatorKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED6A4E492854D2EF002969EC /* SwiftyJSON */ = {
+		EDF9C2CF2872417E0090E6EE /* DeepCoordinatorKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED6A4E482854D2EF002969EC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
+			package = EDF9C2CE2872417E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */;
+			productName = DeepCoordinatorKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

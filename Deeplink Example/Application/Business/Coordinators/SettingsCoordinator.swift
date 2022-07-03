@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoordinatorKit
+import DeepCoordinatorKit
 
 protocol SettingsCoordinatorProtocol: Coordinatable, DeepLinkResponder {
-    func startSettingsItem(_ item: SettingsItem, animated: Bool, completion: (() -> Void)?)
+    func startSettingsItem(_ item: SettingsItem, animated: Bool)
 }
 
 final class SettingsCoordinator: SettingsCoordinatorProtocol {
@@ -46,16 +48,18 @@ final class SettingsCoordinator: SettingsCoordinatorProtocol {
     
     // MARK: - Methods
     
-    func start(animated: Bool, completion: (() -> Void)?) {
+    func start(animated: Bool) {
         let view = settingsScreenBuilder.buildSettingsList(output: self)
-        navigationController.pushViewController(view, animated: true)
-        completion?()
+        navigationController.pushViewController(view, animated: animated)
     }
     
-    func startSettingsItem(_ item: SettingsItem, animated: Bool, completion: (() -> Void)?) {
+    func startSettingsItem(_ item: SettingsItem, animated: Bool) {
         let view = settingsScreenBuilder.buildSettingsItem(item)
         navigationController.pushViewController(view, animated: animated)
-        completion?()
+    }
+    
+    func finish(animated: Bool) {
+        childLocator.popAll()
     }
 }
 
@@ -64,7 +68,7 @@ final class SettingsCoordinator: SettingsCoordinatorProtocol {
 extension SettingsCoordinator: SettingsOutput {
     
     func setting(_ presenter: SettingsPresenterProtocol, didSelectSettingItem item: SettingsItem) {
-        startSettingsItem(item, animated: true, completion: nil)
+        startSettingsItem(item, animated: true)
     }
 }
 
@@ -74,13 +78,13 @@ extension SettingsCoordinator {
     
     func makeWifiHandler() -> DeepLinkRoute {
         .init(path: "settings" / "wifi") { [weak self] json in
-            self?.startSettingsItem(.wifi, animated: true, completion: nil)
+            self?.startSettingsItem(.wifi, animated: true)
         }
     }
     
     func makeBluetoothHandler() -> DeepLinkRoute {
         .init(path: "settings" / "bluetooth") { [weak self] json in
-            self?.startSettingsItem(.bluetooth, animated: true, completion: nil)
+            self?.startSettingsItem(.bluetooth, animated: true)
         }
     }
 }

@@ -39,7 +39,7 @@
 		EDB13B1C285537770032CBDC /* ActorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB13B1B285537770032CBDC /* ActorViewController.swift */; };
 		EDB13B1E285537890032CBDC /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB13B1D285537890032CBDC /* MoviesListViewController.xib */; };
 		EDB13B20285538130032CBDC /* ActorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB13B1F285538130032CBDC /* ActorPresenter.swift */; };
-		EDF9C2D02872417E0090E6EE /* DeepCoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = EDF9C2CF2872417E0090E6EE /* DeepCoordinatorKit */; };
+		EDF9C2D32872511E0090E6EE /* DeepCoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = EDF9C2D22872511E0090E6EE /* DeepCoordinatorKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF9C2D02872417E0090E6EE /* DeepCoordinatorKit in Frameworks */,
+				EDF9C2D32872511E0090E6EE /* DeepCoordinatorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +396,7 @@
 			);
 			name = "Deeplink Example";
 			packageProductDependencies = (
-				EDF9C2CF2872417E0090E6EE /* DeepCoordinatorKit */,
+				EDF9C2D22872511E0090E6EE /* DeepCoordinatorKit */,
 			);
 			productName = "Deeplink Example";
 			productReference = ED238D0B2854CA71000CC3FE /* Deeplink Example.app */;
@@ -427,7 +427,7 @@
 			);
 			mainGroup = ED238D022854CA71000CC3FE;
 			packageReferences = (
-				EDF9C2CE2872417E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */,
+				EDF9C2D12872511E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */,
 			);
 			productRefGroup = ED238D0C2854CA71000CC3FE /* Products */;
 			projectDirPath = "";
@@ -694,20 +694,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EDF9C2CE2872417E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */ = {
+		EDF9C2D12872511E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kotostrophe/DeepCoordinatorKit";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EDF9C2CF2872417E0090E6EE /* DeepCoordinatorKit */ = {
+		EDF9C2D22872511E0090E6EE /* DeepCoordinatorKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDF9C2CE2872417E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */;
+			package = EDF9C2D12872511E0090E6EE /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */;
 			productName = DeepCoordinatorKit;
 		};
 /* End XCSwiftPackageProductDependency section */

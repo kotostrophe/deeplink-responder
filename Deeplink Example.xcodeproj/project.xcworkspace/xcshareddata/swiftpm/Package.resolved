@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kotostrophe/DeepCoordinatorKit",
       "state" : {
-        "revision" : "23c5aa00097f482a9b6346fb8a3c5156fb0e8042",
-        "version" : "1.0.2"
+        "branch" : "main",
+        "revision" : "e6c6b3e3b06f33dd4e8cc93856726f52e82ef63a"
       }
     },
     {

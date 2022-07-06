@@ -24,6 +24,7 @@
 		ED238D182854CA7A000CC3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED238D172854CA7A000CC3FE /* Assets.xcassets */; };
 		ED238D1B2854CA7A000CC3FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED238D192854CA7A000CC3FE /* LaunchScreen.storyboard */; };
 		ED238D292854CAEE000CC3FE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED238D282854CAEE000CC3FE /* ApplicationCoordinator.swift */; };
+		ED3F578A2875C5A100F55A09 /* DeepCoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED3F57892875C5A100F55A09 /* DeepCoordinatorKit */; };
 		ED6A4E522854F04A002969EC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E512854F04A002969EC /* MainCoordinator.swift */; };
 		ED6A4E5B285500EC002969EC /* MoviesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E5A285500EC002969EC /* MoviesListPresenter.swift */; };
 		ED6A4E5E2855011F002969EC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E5D2855011F002969EC /* Movie.swift */; };
@@ -35,7 +36,6 @@
 		ED6A4E8828552081002969EC /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E8728552081002969EC /* MoviesCoordinator.swift */; };
 		ED6A4E8A285523A7002969EC /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A4E89285523A7002969EC /* MovieViewController.swift */; };
 		ED6A4E8C285523AC002969EC /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6A4E8B285523AC002969EC /* MovieViewController.xib */; };
-		ED85E3E02872C5FF002C609B /* DeepCoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = ED85E3DF2872C5FF002C609B /* DeepCoordinatorKit */; };
 		EDB13B1A285537700032CBDC /* ActorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB13B19285537700032CBDC /* ActorViewController.xib */; };
 		EDB13B1C285537770032CBDC /* ActorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB13B1B285537770032CBDC /* ActorViewController.swift */; };
 		EDB13B1E285537890032CBDC /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB13B1D285537890032CBDC /* MoviesListViewController.xib */; };
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED85E3E02872C5FF002C609B /* DeepCoordinatorKit in Frameworks */,
+				ED3F578A2875C5A100F55A09 /* DeepCoordinatorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +396,7 @@
 			);
 			name = "Deeplink Example";
 			packageProductDependencies = (
-				ED85E3DF2872C5FF002C609B /* DeepCoordinatorKit */,
+				ED3F57892875C5A100F55A09 /* DeepCoordinatorKit */,
 			);
 			productName = "Deeplink Example";
 			productReference = ED238D0B2854CA71000CC3FE /* Deeplink Example.app */;
@@ -427,7 +427,7 @@
 			);
 			mainGroup = ED238D022854CA71000CC3FE;
 			packageReferences = (
-				ED85E3DE2872C5FF002C609B /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */,
+				ED3F57882875C5A100F55A09 /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */,
 			);
 			productRefGroup = ED238D0C2854CA71000CC3FE /* Products */;
 			projectDirPath = "";
@@ -694,20 +694,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED85E3DE2872C5FF002C609B /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */ = {
+		ED3F57882875C5A100F55A09 /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kotostrophe/DeepCoordinatorKit";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED85E3DF2872C5FF002C609B /* DeepCoordinatorKit */ = {
+		ED3F57892875C5A100F55A09 /* DeepCoordinatorKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED85E3DE2872C5FF002C609B /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */;
+			package = ED3F57882875C5A100F55A09 /* XCRemoteSwiftPackageReference "DeepCoordinatorKit" */;
 			productName = DeepCoordinatorKit;
 		};
 /* End XCSwiftPackageProductDependency section */
